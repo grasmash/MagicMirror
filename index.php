@@ -11,6 +11,7 @@
 	</script>
 	<meta name="google" value="notranslate" />
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Cache-control" content="no-cache">
 	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
 <body>
