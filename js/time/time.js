@@ -1,5 +1,5 @@
 var time = {
-	timeFormat: config.time.timeFormat || 24,
+	hourFormat: config.time.hourFormat,
 	dateLocation: '.date',
 	timeLocation: '#time',
 	updateInterval: 1000,
@@ -15,12 +15,12 @@ time.updateTime = function () {
 	var timeLocation = this.timeLocation;
 	var _now = moment();
 	var _date = _now.format('[<span class="dayname">]dddd,[</span> <span class="longdate">]LL[</span>]');
-	
+
 	$(this.dateLocation).updateWithText(_date, 1000);
 	$('.fade').removeClass('fade')
 	var html = ''
 	if (this.displaySeconds) {
-		html = _now.format(this._timeFormat+':mm').replace(/./g, '<span class="digit">$&</span>') + 
+		html = _now.format(this._timeFormat+':mm').replace(/./g, '<span class="digit">$&</span>') +
 			'<span class="sec">' + _now.format('ss').replace(/./g, '<span class="digit">$&</span>') + '</span>';
 		if (typeof this.intervalId == 'undefined') {
 			this.intervalId = setInterval(function () {
@@ -43,12 +43,12 @@ time.updateTime = function () {
 		diff.find('.digit').each(function( index ) {
 			var _text  = $( this ).text();
 			var _i = index+1;
-			var liveNode = $(timeLocation).find('.digit')[index] 
+			var liveNode = $(timeLocation).find('.digit')[index]
 			if (typeof liveNode != 'undefined') {
 				liveNode = $(liveNode);
 				var _text2 = liveNode.text();
 				if (_text != _text2) {
-					
+
 					liveNode.addClass('fade');
 					$(this).addClass('fade');
 				}
@@ -71,7 +71,7 @@ time.updateTime = function () {
 		}
 	} else {
 		if (this.displaySeconds) {
-			$(this.timeLocation).html(_now.format(this._timeFormat+':mm[<span class="sec">]ss[</span>]'));
+			$(this.timeLocation).html(_now.format(this._timeFormat+':mm[<span class="am-pm">]a[</span>][<span class="sec">]ss[</span>]'));
 		} else {
 			$(this.timeLocation).html(_now.format(this._timeFormat+':mm'));
 		}
@@ -80,11 +80,7 @@ time.updateTime = function () {
 
 time.init = function () {
 
-	if (parseInt(time.timeFormat) === 12) {
-		time._timeFormat = 'hh'
-	} else {
-		time._timeFormat = 'HH';
-	}
-	this.updateTime();
+  time._timeFormat = config.time.hourFormat;
+  this.updateTime();
 
 }

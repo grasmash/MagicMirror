@@ -1,7 +1,7 @@
 var config = {
     lang: 'en',
     time: {
-        timeFormat: 12,
+        hourFormat: 'h',
         displaySeconds: true,
         digitFade: false,
     },
