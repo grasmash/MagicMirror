@@ -1,5 +1,5 @@
 var version = {
-	updateInterval: 600000,
+	updateInterval: config.version.updateInterval ? config.version.updateInterval : 600000,
 	intervalId: null
 }
 
