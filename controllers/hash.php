@@ -1,7 +1,7 @@
 <?php
 	echo json_encode(
 	  array(
-	    "gitHash" => trim(`git rev-parse HEAD`)
+	    "gitHash" => trim(shell_exec('git rev-parse HEAD'))
 	  )
 	);
 ?>

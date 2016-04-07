@@ -1,5 +1,5 @@
 var config = {
-    lang: 'nl',
+    lang: 'en',
     time: {
         timeFormat: 12,
         displaySeconds: true,
@@ -9,30 +9,31 @@ var config = {
         //change weather params here:
         //units: metric or imperial
         params: {
-            q: 'Baarn,Netherlands',
-            units: 'metric',
+            q: 'Severna Park, Maryland',
+            units: 'imperial',
             // if you want a different lang for the weather that what is set above, change it here
-            lang: 'nl',
-            APPID: 'YOUR_FREE_OPENWEATHER_API_KEY'
+            lang: 'en',
+            // Loaded from config.js
+            APPID: typeof openWeatherApiKey != 'undefined' ? openWeatherApiKey : '',
+            dateFormat: 'h:mm a'
         }
     },
     compliments: {
         interval: 30000,
         fadeInterval: 4000,
         morning: [
-            'Good morning, handsome!',
-            'Enjoy your day!',
-            'How was your sleep?'
+            'Good morning, Theodore!',
+            'Good morning handsome!!',
+            'Rise and shine!'
         ],
         afternoon: [
-            'Hello, beauty!',
-            'You look sexy!',
-            'Looking good today!'
+            'Theo rocks!',
+            'Looking good today bud!'
         ],
         evening: [
-            'Wow, you look hot!',
-            'You look nice!',
-            'Hi, sexy!'
+            "Wow, you're awesome!",
+            'Did I hear a plane?',
+            'Where is Mr. Raccoon?'
         ]
     },
     calendar: {
@@ -41,7 +42,7 @@ var config = {
 		defaultSymbol: 'calendar', // Fontawsome Symbol see http://fontawesome.io/cheatsheet/
         urls: [
 		{
-			symbol: 'calendar-plus-o', 
+			symbol: 'calendar-plus-o',
 			url: 'https://p01-calendarws.icloud.com/ca/subscribe/1/n6x7Farxpt7m9S8bHg1TGArSj7J6kanm_2KEoJPL5YIAk3y70FpRo4GyWwO-6QfHSY5mXtHcRGVxYZUf7U3HPDOTG5x0qYnno1Zr_VuKH2M'
 		},
 		{

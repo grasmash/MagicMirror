@@ -87,8 +87,8 @@ weather.updateCurrentWeather = function () {
 			$(this.temperatureLocation).updateWithText(_newTempHtml, this.fadeInterval);
 
 			var _now = moment().format('HH:mm'),
-				_sunrise = moment(data.sys.sunrise*1000).format('HH:mm'),
-				_sunset = moment(data.sys.sunset*1000).format('HH:mm');
+				_sunrise = moment(data.sys.sunrise*1000).format(config.weather.params.dateFormat),
+				_sunset = moment(data.sys.sunset*1000).format(config.weather.params.dateFormat);
 
 			var _newWindHtml = '<span class="wind"><span class="wi wi-strong-wind xdimmed"></span> ' + this.ms2Beaufort(_wind) + '</span>',
 				_newSunHtml = '<span class="sun"><span class="wi wi-sunrise xdimmed"></span> ' + _sunrise + '</span>';
@@ -155,7 +155,7 @@ weather.updateWeatherForecast = function () {
 			_forecastHtml2 += '</tr>',
 			_forecastHtml3 += '</tr>',
 			_forecastHtml4 += '</tr>';
-			
+
 			if (this.orientation == 'vertical') {
 				_forecastHtml += '</table>';
 			} else {
