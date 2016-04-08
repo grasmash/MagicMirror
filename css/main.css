@@ -19,17 +19,20 @@ html {
 
 .top {
   position: absolute;
-  top: 50px;
+  // top: 50px;
+  top: 0;
 }
 
 .left {
   position: absolute;
-  left: 50px;
+  // left: 50px;
+  left: 0;
 }
 
 .right {
   position: absolute;
-  right: 50px;
+  // right: 50px;
+  right: 0;
   text-align: right;
 }
 
@@ -58,7 +61,8 @@ html {
 
 .bottom {
   position: absolute;
-  bottom: 50px;
+  // bottom: 50px;
+  bottom: 0;
 }
 
 .xxsmall,
