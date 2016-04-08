@@ -24,7 +24,8 @@ var config = {
     morning: [
       'Good morning, Theodore!',
       'Good morning handsome!!',
-      'Rise and shine!'
+      'Rise and shine!',
+      'Did you sleep well?'
     ],
     afternoon: [
       'Theo rocks!',

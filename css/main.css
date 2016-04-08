@@ -198,6 +198,12 @@ html {
   display: none;
 }
 
+.age {
+    /*bottom: 50px;*/
+    /*left: 50px;*/
+    /*position: absolute;*/
+}
+
 @font-face {
   font-family: 'HelveticaNeue-UltraLight';
   src: url('font/HelveticaNeue-UltraLight.eot');
