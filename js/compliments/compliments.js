@@ -15,9 +15,7 @@ var compliments = {
  * Changes the compliment visible on the screen
  */
 compliments.updateCompliment = function () {
-
-
-
+  
   var _list = [];
 
   var hour = moment().hour();

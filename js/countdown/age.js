@@ -10,7 +10,8 @@ $(function() {
   var secondsTimer;
   var nextBirthdayTimer;
 
-  startTimers('07/21/15');
+  // startTimers('07/21/15');
+  startTimers('08/11/15');
 
   function startTimers(dateText) {
     // Convert mm/dd/yyyy to date object.
@@ -18,7 +19,7 @@ $(function() {
 
     window.clearInterval(totalTimer);
     totalTimer = countdown(birthday, function(ts) {
-      $('.totalTimer').html('You are ' + ts.toHTML("strong") + ' old.');
+      $('.totalTimer').html('Theodore is ' + ts.toHTML("strong") + ' old.');
     });
 
     startTimer(yearsTimer, 'years');

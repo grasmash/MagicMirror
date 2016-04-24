@@ -22,19 +22,16 @@ var config = {
     interval: 30000,
     fadeInterval: 4000,
     morning: [
-      'Good morning, Theodore!',
-      'Good morning handsome!!',
+      'Good morning!',
       'Rise and shine!',
       'Did you sleep well?'
     ],
     afternoon: [
       'Theo rocks!',
-      'Looking good today bud!'
+      'Looking good today!'
     ],
     evening: [
       "Wow, you're awesome!",
-      'Did I hear a plane?',
-      'Where is Mr. Raccoon?'
     ]
   },
   calendar: {
@@ -44,11 +41,7 @@ var config = {
     urls: [
   {
     symbol: 'calendar-plus-o',
-    url: 'https://p01-calendarws.icloud.com/ca/subscribe/1/n6x7Farxpt7m9S8bHg1TGArSj7J6kanm_2KEoJPL5YIAk3y70FpRo4GyWwO-6QfHSY5mXtHcRGVxYZUf7U3HPDOTG5x0qYnno1Zr_VuKH2M'
-  },
-  {
-    symbol: 'soccer-ball-o',
-    url: 'https://www.google.com/calendar/ical/akvbisn5iha43idv0ktdalnor4%40group.calendar.google.com/public/basic.ics',
+    url: 'https://calendar.google.com/calendar/ical/en.usa%23holiday%40group.v.calendar.google.com/public/basic.ics',
   },
   // {
     // symbol: 'mars',

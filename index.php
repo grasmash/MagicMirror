@@ -20,7 +20,6 @@
     <div class="windsun small dimmed"></div>
     <div class="temp"></div>
     <div class="forecast small dimmed"></div>
-<!--    <iframe id="planefinder" width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://embed.planefinder.net"></iframe>-->
   </div>
   <div class="top left">
     <div class="date small dimmed"></div>
@@ -46,7 +45,7 @@
       <div class="minutesTimer"></div>
       <div class="secondsTimer"></div>
       <!--      <div class="dow"></div>-->
-      <div class="next-birthday"></div>
+      <!--      <div class="next-birthday"></div>-->
     </div>
   </div>
 
@@ -70,7 +69,7 @@
 <script src="js/countdown/countdown.min.js"></script>
 <script src="js/main.js?nocache=<?php echo md5(microtime()) ?>"></script>
 <!--<script src="js/planeFinder.js"></script>-->
-<!-- <script src="js/socket.io.min.js"></script> -->
+ <script src="js/socket.io.min.js"></script>
 <?php  include(dirname(__FILE__).'/controllers/modules.php');?>
 </body>
 </html>
