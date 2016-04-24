@@ -20,6 +20,7 @@ var config = {
   },
   compliments: {
     interval: 30000,
+    pause: 30000,
     fadeInterval: 4000,
     morning: [
       'Good morning!',
@@ -32,6 +33,7 @@ var config = {
     ],
     evening: [
       "Wow, you're awesome!",
+      "You look incredible!"
     ]
   },
   calendar: {
@@ -39,22 +41,22 @@ var config = {
     displaySymbol: true,
     defaultSymbol: 'calendar', // Fontawsome Symbol see http://fontawesome.io/cheatsheet/
     urls: [
-  {
-    symbol: 'calendar-plus-o',
-    url: 'https://calendar.google.com/calendar/ical/en.usa%23holiday%40group.v.calendar.google.com/public/basic.ics',
-  },
-  // {
-    // symbol: 'mars',
-    // url: "https://server/url/to/his.ics",
-  // },
-  // {
-    // symbol: 'venus',
-    // url: "https://server/url/to/hers.ics",
-  // },
-  // {
-    // symbol: 'venus-mars',
-    // url: "https://server/url/to/theirs.ics",
-  // },
+      {
+        symbol: 'calendar-plus-o',
+        url: 'https://calendar.google.com/calendar/ical/en.usa%23holiday%40group.v.calendar.google.com/public/basic.ics',
+      },
+      {
+        symbol: 'mars',
+        url: "https://calendar.google.com/calendar/ical/madmatter23%40gmail.com/private-2290e3f4a0285ce08770b63dfaad57a2/basic.ics",
+      },
+    // {
+      // symbol: 'venus',
+      // url: "https://server/url/to/hers.ics",
+    // },
+    // {
+      // symbol: 'venus-mars',
+      // url: "https://server/url/to/theirs.ics",
+    // },
   ]
   },
   news: {

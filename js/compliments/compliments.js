@@ -8,6 +8,7 @@ var compliments = {
   },
   updateInterval: config.compliments.interval || 30000,
   fadeInterval: config.compliments.fadeInterval || 4000,
+  pause: config.compliments.pause || 0,
   intervalId: null
 };
 
@@ -15,7 +16,7 @@ var compliments = {
  * Changes the compliment visible on the screen
  */
 compliments.updateCompliment = function () {
-  
+
   var _list = [];
 
   var hour = moment().hour();
@@ -53,7 +54,7 @@ compliments.updateCompliment = function () {
   var _randomIndex = Math.floor(Math.random() * _list.length);
   compliments.currentCompliment = _list[_randomIndex];
 
-  $('.compliment').updateWithText(compliments.currentCompliment, compliments.fadeInterval);
+  $('.compliment').updateWithText(compliments.currentCompliment, compliments.fadeInterval, compliments.pause);
 
 }
 

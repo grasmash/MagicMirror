@@ -1,12 +1,13 @@
-jQuery.fn.updateWithText = function(text, speed)
+jQuery.fn.updateWithText = function(text, speed, pause)
 {
+  pause = pause || 0;
 	var dummy = $('<div/>').html(text);
 
 	if ($(this).html() != dummy.html())
 	{
 		$(this).fadeOut(speed/2, function() {
 			$(this).html(text);
-			$(this).fadeIn(speed/2, function() {
+			$(this).delay(pause).fadeIn(speed/2, function() {
 				//done
 			});
 		});
