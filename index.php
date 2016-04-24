@@ -33,8 +33,8 @@
     <div class="compliment light"></div>
   </div>
 	<div class="bottom center-hor">
-<!--    <div class="news medium"></div>-->
-
+    <div class="news medium"></div>
+    
     <div class="age xsmall">
       <div class="totalTimer"></div>
       <div class="yearsTimer"></div>
