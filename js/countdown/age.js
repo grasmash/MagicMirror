@@ -10,8 +10,8 @@ $(function() {
   var secondsTimer;
   var nextBirthdayTimer;
 
-  // startTimers('07/21/15');
-  startTimers('08/11/15');
+  startTimers('07/21/15');
+  //startTimers('08/11/15');
 
   function startTimers(dateText) {
     // Convert mm/dd/yyyy to date object.
