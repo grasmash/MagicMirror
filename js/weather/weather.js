@@ -86,14 +86,18 @@ weather.updateCurrentWeather = function () {
 
 			$(this.temperatureLocation).updateWithText(_newTempHtml, this.fadeInterval);
 
-			var _now = moment().format('HH:mm'),
-				_sunrise = moment(data.sys.sunrise*1000).format(config.weather.params.dateFormat),
-				_sunset = moment(data.sys.sunset*1000).format(config.weather.params.dateFormat);
+			var _now = moment().format(config.weather.params.dateFormat),
+			_sunrise = moment(data.sys.sunrise*1000).format(config.weather.params.dateFormat),
+			_sunset = moment(data.sys.sunset*1000).format(config.weather.params.dateFormat);
 
-			var _newWindHtml = '<span class="wind"><span class="wi wi-strong-wind xdimmed"></span> ' + this.ms2Beaufort(_wind) + '</span>',
-				_newSunHtml = '<span class="sun"><span class="wi wi-sunrise xdimmed"></span> ' + _sunrise + '</span>';
+      var _now_iso = moment().format();
+      var _sunrise_iso = moment(data.sys.sunrise*1000).format();
+      var _sunset_iso = moment(data.sys.sunset*1000).format();
 
-			if (_sunrise < _now && _sunset > _now) {
+			var _newWindHtml = '<span class="wind"><span class="wi wi-strong-wind xdimmed"></span> ' + this.ms2Beaufort(_wind) + '</span>';
+			var	_newSunHtml = '<span class="sun"><span class="wi wi-sunrise xdimmed"></span> ' + _sunrise + '</span>';
+
+			if (moment(_sunrise_iso).isBefore(_now_iso) && moment(_sunset_iso).isAfter(_now_iso)) {
 				_newSunHtml = '<span class="sun"><span class="wi wi-sunset xdimmed"></span> ' + _sunset + '</span>';
 			}
 
