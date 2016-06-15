@@ -87,7 +87,7 @@ news.parseFeed = function (data) {
 
 	}
 
-	this.newsItems = this.newsItems.concat(_rssItems);
+	this.newsItems = _rssItems;
 
 	return true;
 
@@ -131,7 +131,6 @@ news.showNews = function () {
 }
 
 news.init = function () {
-
 	if (this.feed === null || (this.feed instanceof Array === false && typeof this.feed !== 'string')) {
 		return false;
 	} else if (typeof this.feed === 'string') {

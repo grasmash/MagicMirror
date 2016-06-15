@@ -125,12 +125,8 @@ calendar.processEvents = function (url, events) {
 }
 
 calendar.updateData = function (callback) {
-  console.log(this.calendarUrl);
   new ical_parser("controllers/calendar.php" + "?url="+encodeURIComponent(this.calendarUrl), function(cal) {
     this.processEvents(this.calendarUrl, cal.getEvents());
-
-    console.log('ical happening!');
-    console.log(cal.getEvents);
 
     this.calendarPos++;
     if ((typeof config.calendar.urls == 'undefined') || (this.calendarPos >= config.calendar.urls.length)) {
