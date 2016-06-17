@@ -60,7 +60,8 @@ var config = {
   ]
   },
   news: {
-    feed: 'http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml'
+    feed: 'http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml',
+    fetchInterval: 60000 // 1 minute
   },
   version: {
     // Five minutes.

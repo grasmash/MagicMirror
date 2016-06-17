@@ -8,7 +8,7 @@ var news = {
 	seenNewsItem: [],
 	_yqURL: 'https://query.yahooapis.com/v1/public/yql',
 	_yqlQS: '?format=json&q=select%20*%20from%20rss%20where%20url%3D',
-	_cacheBuster: Math.floor((new Date().getTime()) / 1200 / 1000),
+	_cacheBuster: function (){return Math.floor((new Date().getTime()) / 1200)},
 	_failedAttempts: 0,
 	fetchInterval: config.news.fetchInterval || 60000,
 	updateInterval: config.news.interval || 5500,
@@ -23,8 +23,7 @@ var news = {
  * @return {string}      The new location of the RSS feed provided by Yahoo
  */
 news.buildQueryString = function (feed) {
-
-	return this._yqURL + this._yqlQS + '\'' + encodeURIComponent(feed) + '\'';
+	return this._yqURL + this._yqlQS + '\'' + encodeURIComponent(feed) + '\'' + '&cachebuster=' + this._cacheBuster();
 
 }
 
@@ -32,7 +31,6 @@ news.buildQueryString = function (feed) {
  * Fetches the news for each feed provided in the config file
  */
 news.fetchNews = function () {
-
 	// Reset the news feed
 	this.newsItems = [];
 
@@ -78,7 +76,6 @@ news.fetchFeed = function (yqUrl) {
  * @return {boolean}      Confirms that the feed was parsed correctly
  */
 news.parseFeed = function (data) {
-
 	var _rssItems = [];
 
 	for (var i = 0, count = data.length; i < count; i++) {
