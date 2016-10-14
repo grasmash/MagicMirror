@@ -47,7 +47,7 @@ var config = {
       },
       {
         symbol: 'mars',
-        url: "https://calendar.google.com/calendar/ical/madmatter23%40gmail.com/private-2290e3f4a0285ce08770b63dfaad57a2/basic.ics",
+        url: "https://calendar.google.com/calendar/ical/matt.grasmick%40gmail.com/private-c97cee88cb43458219d8fb831003724e/basic.ics",
       },
     // {
       // symbol: 'venus',
